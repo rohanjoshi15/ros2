@@ -78,11 +78,11 @@ class NumberPublisher : public rclcpp::Node {
 ### Constructor
 
 ```cpp
-NumberPublisher() : Node("number_publisher"), number_(1) {
+NumberPublisher() : Node("number_publisher"), num(1) {
 ```
 
 - Initializes the node with the name `number_publisher`.
-- Initializes `number_` to 1.
+- Initializes `num` to 1.
 
 ### Publisher Creation
 
@@ -97,7 +97,7 @@ publisher_ = this->create_publisher<std_msgs::msg::Int32>("sending_nums", 10);
 ### Timer
 - It calls the function given as parameter in the timer bind repeatedly at a fixed interval
 ```cpp
-timer_ = this->create_wall_timer(
+timer = this->create_wall_timer(
     std::chrono::seconds(1),
     std::bind(&NumberPublisher::publish_number, this));
 ```
@@ -110,7 +110,7 @@ timer_ = this->create_wall_timer(
 ```cpp
 void publish_number() {
     auto msg = std_msgs::msg::Int32();
-    msg.data = number_++;
+    msg.data = num++;
     RCLCPP_INFO(this->get_logger(), "Publishing: %d", msg.data);
     publisher_->publish(msg);
 }
