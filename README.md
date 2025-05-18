@@ -13,7 +13,7 @@ In ROS 2, a **workspace** is where you keep all your packages.
 In ROS 2, a workspace is where you keep all your packages. You create a workspace using:
 ```bash
 mkdir -p ~/tasks_ws/src    # 'tasks_ws' is the workspace name which i have given , It can be custom
-cd ~/ros2_ws
+cd ~/tasks_ws
 colcon build
 source install/setup.bash
 ```
@@ -27,7 +27,7 @@ A **package** in ROS 2 is a basic unit of code organization. It contains source 
 ### Create a C++ Package
 
 ```bash
-cd ~/ros2_ws/src
+cd ~/tasks_ws/src
 ros2 pkg create --build-type ament_cmake <package_name>
 ```
 
