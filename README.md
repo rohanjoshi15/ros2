@@ -34,7 +34,9 @@ ros2 pkg create --build-type ament_cmake <package_name>
 > Place your `.cpp` files in the `src` folder of your package.
 
 ---
-
+## To run the example code use this
+- ros2 launch number_square launch_nodes.py
+---
 ## Nodes
 
 A **Node** is the smallest running process in ROS 2.
