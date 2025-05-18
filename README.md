@@ -1,8 +1,8 @@
 # ROS 2 (Robot Operating System 2)
 
 ROS 2 is an upgrade over ROS 1, utilizing DDS (Data Distribution System) for real-time, multi-platform, and decentralized communication.
-- I have provided the resources for deeper knowledge below
-- You must have prior knowledge of Cpp , Python , OOPs , Linux commands
+- I have provided the resources for further references below.
+- Prior knowledge of Cpp , Python , OOPs , Linux commands needed.
 ---
 
 ## Workspace
