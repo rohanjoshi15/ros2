@@ -257,7 +257,7 @@ QoS defines a group of settings called **policies** that dictate how a message i
 
 ---
 
-## ✅ Publisher QoS
+## Publisher QoS
 
 ```cpp
 rclcpp::QoS qos_profile(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
@@ -289,7 +289,7 @@ qos_1
 
 ---
 
-### 🔄 Subscriber 2 QoS: for Cubing the number
+### Subscriber 2 QoS: for Cubing the number
 
 ```cpp
 rclcpp::QoS qos_2(rclcpp::KeepLast(5));
