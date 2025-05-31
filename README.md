@@ -257,6 +257,56 @@ QoS defines a group of settings called **policies** that dictate how a message i
 
 ---
 
+## ✅ Publisher QoS
+
+```cpp
+rclcpp::QoS qos_profile(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
+qos_profile
+    .reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
+    .durability(RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL)
+    .history(RMW_QOS_POLICY_HISTORY_KEEP_LAST)
+    .keep_last(15)
+    .deadline(rclcpp::Duration::from_seconds(2))
+    .lifespan(rclcpp::Duration::from_seconds(4))
+    .liveliness(RMW_QOS_POLICY_LIVELINESS_AUTOMATIC)
+    .liveliness_lease_duration(rclcpp::Duration::from_seconds(3));
+```
+
+##  Subscriber QoS
+## To test out differences between these subscriptions run them separately after a certain amount of time, If you use a launch file they will be launched together and no difference will be noticieable.
+---
+
+###  Subscriber 1 QoS: for Squaring the number
+
+```cpp
+rclcpp::QoS qos_1(rclcpp::KeepLast(10));
+qos_1
+    .reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE)
+    .durability(RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL);
+```
+
+- **Reliable + Transient Local**: Subscriber receives *reliable* delivery and even older messages that were published before the subscriber joined.
+
+---
+
+### 🔄 Subscriber 2 QoS: for Cubing the number
+
+```cpp
+rclcpp::QoS qos_2(rclcpp::KeepLast(5));
+qos_2
+    .reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT)
+    .durability(RMW_QOS_POLICY_DURABILITY_VOLATILE);
+```
+
+- **Best Effort + Volatile**: Subscriber does **not** get guaranteed delivery or old messages. It only gets messages that happen to arrive when it's active.
+
+
+- The DDS middleware will try to **match** the QoS between publisher and subscriber.
+  - If incompatible (e.g., Reliable publisher vs Best Effort subscriber), messages may not be delivered.
+---
+
+
+
 ### QoS Policies
 
 1. **History**  
@@ -290,6 +340,107 @@ QoS defines a group of settings called **policies** that dictate how a message i
    - Maximum time a publisher can remain silent before it is considered dead or inactive.
 
 ---
+
+### QoS Compatibility Tables
+    
+- You can find the tables on https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Quality-of-Service-Settings.html
+---
+# Important Point
+- Subscriptions request a QoS profile that is the “minimum quality” that it is willing to accept, and publishers offer a QoS profile that is the “maximum quality” that it is able to provide. Connections are only made if every policy of the requested QoS profile is not more stringent than that of the offered QoS profile. Multiple subscriptions can be connected to a single publisher simultaneously even if their requested QoS profiles are different.
+- ROS 1, any publisher and subscriber with the same message type on the same topic would be connected. The possibility of incompatible requested and offered QoS profiles is something new to be aware of when using ROS 2.
+
+## Compatibility of Reliability QoS Policies
+
+| Publisher     | Subscription   | Compatible | 
+|---------------|----------------|------------|
+| Best effort   | Best effort    | Yes        |
+| Best effort   | Reliable       | No         |
+| Reliable      | Best effort    | Yes        |
+| Reliable      | Reliable       | Yes        |
+
+## Compatibility of Durability QoS Policies
+
+| Publisher       | Subscription     | Compatible | Result               |
+|------------------|------------------|------------|----------------------|
+| Volatile         | Volatile         | Yes        | New messages only    |
+| Volatile         | Transient local  | No         | No communication     |
+| Transient local  | Volatile         | Yes        | New messages only    |
+| Transient local  | Transient local  | Yes        | New and old messages |
+
+## Compatibility of Deadline QoS Policies
+
+_Assume x and y are arbitrary valid duration values._
+
+| Publisher | Subscription         | Compatible |
+|-----------|----------------------|------------|
+| Default   | Default              | Yes        |
+| Default   | x                    | No         |
+| x         | Default              | Yes        |
+| x         | x                    | Yes        |
+| x         | y (where y > x)      | Yes        |
+| x         | y (where y < x)      | No         |
+
+## Compatibility of Liveliness QoS Policies
+
+| Publisher         | Subscription        | Compatible |
+|--------------------|---------------------|------------|
+| Automatic          | Automatic           | Yes        |
+| Automatic          | Manual by topic     | No         |
+| Manual by topic    | Automatic           | Yes        |
+| Manual by topic    | Manual by topic     | Yes        |
+
+## Compatibility of Lease Duration QoS Policies
+
+_Assume x and y are arbitrary valid duration values._
+
+| Publisher | Subscription         | Compatible |
+|-----------|----------------------|------------|
+| Default   | Default              | Yes        |
+| Default   | x                    | No         |
+| x         | Default              | Yes        |
+| x         | x                    | Yes        |
+| x         | y (where y > x)      | Yes        |
+| x         | y (where y < x)      | No         |
+
+
+### ROS2 Vs ROS1
+
+### 1. Communication Middleware
+
+- **ROS 1**: Uses custom communication protocols (TCPROS and UDPROS).
+- **ROS 2**: Built on DDS (Data Distribution Service), enabling real-time communication, scalability, and quality of service (QoS) settings.
+
+### 2. Real-Time Capability
+
+- **ROS 1**: Lacks real-time support.
+- **ROS 2**: Designed with real-time capabilities, suitable for time-critical applications.
+
+### 3. Multi-Robot Support
+
+- **ROS 1**: Limited support; requires workarounds for multi-robot systems.
+- **ROS 2**: Native support for multi-robot systems with improved namespace management.
+
+### 4. Security
+
+- **ROS 1**: No built-in security features.
+- **ROS 2**: Incorporates DDS security, including authentication, encryption, and access control.
+
+---
+
+
+| ROS 2 QoS Policy        | ROS 1 Equivalent (if any)                 |
+|-------------------------|-----------------------------------------|
+| History + Depth         | Queue size                              |
+| Reliability (Best Effort)| UDPROS (roscpp)                        |
+| Reliability (Reliable)  | TCPROS (default in ROS 1)               |
+| Durability (Transient Local) | Latching publishers                |
+| Others (Deadline, Lifespan, etc.) | No equivalent; ROS 2 exclusive |
+
+
+
+
+
+
 
 ### Resources & Documentations 
 1. https://docs.ros.org/en/rolling/Concepts/Intermediate/About-Quality-of-Service-Settings.html
