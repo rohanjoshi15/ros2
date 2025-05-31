@@ -1,0 +1,11 @@
+/home/rj/tasks_ws/build/number_square/CMakeFiles/uninstall.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/number_square_uninstall.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/pub_node.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/sub_node.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/test.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/edit_cache.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/rebuild_cache.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/list_install_components.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/install.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/install/local.dir
+/home/rj/tasks_ws/build/number_square/CMakeFiles/install/strip.dir

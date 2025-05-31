@@ -1,0 +1,93 @@
+[0.000000] (-) TimerEvent: {}
+[0.000135] (number_square) JobQueued: {'identifier': 'number_square', 'dependencies': OrderedDict()}
+[0.000560] (number_square) JobStarted: {'identifier': 'number_square'}
+[0.007894] (number_square) JobProgress: {'identifier': 'number_square', 'progress': 'cmake'}
+[0.008945] (number_square) JobProgress: {'identifier': 'number_square', 'progress': 'build'}
+[0.009969] (number_square) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rj/tasks_ws/build/number_square', '--', '-j24', '-l24'], 'cwd': '/home/rj/tasks_ws/build/number_square', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'rj'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rj'), ('OLDPWD', '/home/rj'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/rj/.nvm/versions/node/v18.20.8/bin'), ('NVM_INC', '/home/rj/.nvm/versions/node/v18.20.8/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2185'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/rj/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rj/tasks_ws/install:/home/rj/ws_rover/install:/home/rj/ws_rover/src/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rj'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rj/.nvm/versions/node/v18.20.8/bin:/opt/ros/humble/bin:/home/rj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rjazzy:@/tmp/.ICE-unix/2148,unix/rjazzy:/tmp/.ICE-unix/2148'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/fb4c30e6_7082_4998_9bfa_644872d9247e'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.ZX7B72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rj/tasks_ws/install/number_square:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/home/rj/ws_rover/src/install/rover_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rj/tasks_ws/build/number_square'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rj/ws_rover/install/rover_controller/lib/python3.10/site-packages:/home/rj/ws_rover/install/rover_bot/lib/python3.10/site-packages:/home/rj/ws_rover/src/install/rover_controller/lib/python3.10/site-packages:/home/rj/ws_rover/src/install/rover_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rj/tasks_ws/install/number_square:/home/rj/ws_rover/src/install/rover_bot:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble')]), 'shell': False}
+[0.099942] (-) TimerEvent: {}
+[0.127891] (number_square) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pub_node.dir/src/number_publisher.cpp.o\x1b[0m\n'}
+[0.128235] (number_square) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/sub_node.dir/src/number_square.cpp.o\x1b[0m\n'}
+[0.200132] (-) TimerEvent: {}
+[0.300538] (-) TimerEvent: {}
+[0.400898] (-) TimerEvent: {}
+[0.501216] (-) TimerEvent: {}
+[0.601565] (-) TimerEvent: {}
+[0.701933] (-) TimerEvent: {}
+[0.802304] (-) TimerEvent: {}
+[0.902673] (-) TimerEvent: {}
+[1.003038] (-) TimerEvent: {}
+[1.103405] (-) TimerEvent: {}
+[1.203788] (-) TimerEvent: {}
+[1.304134] (-) TimerEvent: {}
+[1.404486] (-) TimerEvent: {}
+[1.504847] (-) TimerEvent: {}
+[1.605149] (-) TimerEvent: {}
+[1.705480] (-) TimerEvent: {}
+[1.805812] (-) TimerEvent: {}
+[1.906186] (-) TimerEvent: {}
+[2.006566] (-) TimerEvent: {}
+[2.106942] (-) TimerEvent: {}
+[2.207342] (-) TimerEvent: {}
+[2.307674] (-) TimerEvent: {}
+[2.408024] (-) TimerEvent: {}
+[2.508382] (-) TimerEvent: {}
+[2.608687] (-) TimerEvent: {}
+[2.709001] (-) TimerEvent: {}
+[2.809265] (-) TimerEvent: {}
+[2.821575] (number_square) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable pub_node\x1b[0m\n'}
+[2.909430] (-) TimerEvent: {}
+[2.961326] (number_square) StdoutLine: {'line': b'[ 75%] Built target pub_node\n'}
+[3.009615] (-) TimerEvent: {}
+[3.110015] (-) TimerEvent: {}
+[3.210443] (-) TimerEvent: {}
+[3.310725] (-) TimerEvent: {}
+[3.410982] (-) TimerEvent: {}
+[3.511322] (-) TimerEvent: {}
+[3.611588] (-) TimerEvent: {}
+[3.711869] (-) TimerEvent: {}
+[3.812155] (-) TimerEvent: {}
+[3.912435] (-) TimerEvent: {}
+[4.012729] (-) TimerEvent: {}
+[4.113043] (-) TimerEvent: {}
+[4.213340] (-) TimerEvent: {}
+[4.313635] (-) TimerEvent: {}
+[4.413937] (-) TimerEvent: {}
+[4.514219] (-) TimerEvent: {}
+[4.614502] (-) TimerEvent: {}
+[4.714784] (-) TimerEvent: {}
+[4.815065] (-) TimerEvent: {}
+[4.915378] (-) TimerEvent: {}
+[5.015717] (-) TimerEvent: {}
+[5.085446] (number_square) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable sub_node\x1b[0m\n'}
+[5.115896] (-) TimerEvent: {}
+[5.216269] (-) TimerEvent: {}
+[5.316578] (-) TimerEvent: {}
+[5.341936] (number_square) StdoutLine: {'line': b'[100%] Built target sub_node\n'}
+[5.353672] (number_square) CommandEnded: {'returncode': 0}
+[5.354569] (number_square) JobProgress: {'identifier': 'number_square', 'progress': 'install'}
+[5.365814] (number_square) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rj/tasks_ws/build/number_square'], 'cwd': '/home/rj/tasks_ws/build/number_square', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'rj'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rj'), ('OLDPWD', '/home/rj'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/rj/.nvm/versions/node/v18.20.8/bin'), ('NVM_INC', '/home/rj/.nvm/versions/node/v18.20.8/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2185'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/rj/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rj/tasks_ws/install:/home/rj/ws_rover/install:/home/rj/ws_rover/src/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rj'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rj/.nvm/versions/node/v18.20.8/bin:/opt/ros/humble/bin:/home/rj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rjazzy:@/tmp/.ICE-unix/2148,unix/rjazzy:/tmp/.ICE-unix/2148'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/fb4c30e6_7082_4998_9bfa_644872d9247e'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.ZX7B72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rj/tasks_ws/install/number_square:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/home/rj/ws_rover/src/install/rover_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rj/tasks_ws/build/number_square'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/rj/ws_rover/install/rover_controller/lib/python3.10/site-packages:/home/rj/ws_rover/install/rover_bot/lib/python3.10/site-packages:/home/rj/ws_rover/src/install/rover_controller/lib/python3.10/site-packages:/home/rj/ws_rover/src/install/rover_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rj/tasks_ws/install/number_square:/home/rj/ws_rover/src/install/rover_bot:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble')]), 'shell': False}
+[5.374127] (number_square) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.375057] (number_square) StdoutLine: {'line': b'-- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/pub_node\n'}
+[5.376672] (number_square) StdoutLine: {'line': b'-- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/pub_node" to ""\n'}
+[5.377189] (number_square) StdoutLine: {'line': b'-- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/sub_node\n'}
+[5.380850] (number_square) StdoutLine: {'line': b'-- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/sub_node" to ""\n'}
+[5.380994] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch\n'}
+[5.381044] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch/launch_nodes.py\n'}
+[5.381085] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/package_run_dependencies/number_square\n'}
+[5.381123] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/parent_prefix_path/number_square\n'}
+[5.381159] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.sh\n'}
+[5.381196] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.dsv\n'}
+[5.381343] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.sh\n'}
+[5.381427] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.dsv\n'}
+[5.381468] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.bash\n'}
+[5.381502] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.sh\n'}
+[5.381535] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.zsh\n'}
+[5.381569] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.dsv\n'}
+[5.381600] (number_square) StdoutLine: {'line': b'-- Installing: /home/rj/tasks_ws/install/number_square/share/number_square/package.dsv\n'}
+[5.381636] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/packages/number_square\n'}
+[5.381668] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig.cmake\n'}
+[5.381701] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig-version.cmake\n'}
+[5.381731] (number_square) StdoutLine: {'line': b'-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/package.xml\n'}
+[5.382795] (number_square) CommandEnded: {'returncode': 0}
+[5.403402] (number_square) JobEnded: {'identifier': 'number_square', 'rc': 0}
+[5.403794] (-) EventReactorShutdown: {}

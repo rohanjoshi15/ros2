@@ -1,0 +1,34 @@
+[0.008s] Invoking command in '/home/rj/tasks_ws/build/number_square': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble /usr/bin/cmake --build /home/rj/tasks_ws/build/number_square -- -j24 -l24
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target pub_node[0m
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target sub_node[0m
+[0.065s] [ 25%] [32mBuilding CXX object CMakeFiles/pub_node.dir/src/number_publisher.cpp.o[0m
+[0.066s] [ 50%] [32mBuilding CXX object CMakeFiles/sub_node.dir/src/number_square.cpp.o[0m
+[2.646s] [ 75%] [32m[1mLinking CXX executable pub_node[0m
+[2.767s] [ 75%] Built target pub_node
+[4.919s] [100%] [32m[1mLinking CXX executable sub_node[0m
+[5.150s] [100%] Built target sub_node
+[5.161s] Invoked command in '/home/rj/tasks_ws/build/number_square' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble /usr/bin/cmake --build /home/rj/tasks_ws/build/number_square -- -j24 -l24
+[5.172s] Invoking command in '/home/rj/tasks_ws/build/number_square': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble /usr/bin/cmake --install /home/rj/tasks_ws/build/number_square
+[5.181s] -- Install configuration: ""
+[5.181s] -- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/pub_node
+[5.182s] -- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/pub_node" to ""
+[5.182s] -- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/sub_node
+[5.184s] -- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/sub_node" to ""
+[5.184s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch
+[5.184s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch/launch_nodes.py
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/package_run_dependencies/number_square
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/parent_prefix_path/number_square
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.sh
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.dsv
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.sh
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.dsv
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.bash
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.sh
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.zsh
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.dsv
+[5.185s] -- Installing: /home/rj/tasks_ws/install/number_square/share/number_square/package.dsv
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/packages/number_square
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig.cmake
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig-version.cmake
+[5.185s] -- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/package.xml
+[5.186s] Invoked command in '/home/rj/tasks_ws/build/number_square' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rj/ws_rover/install/rover_controller:/home/rj/ws_rover/install/rover_bot:/home/rj/ws_rover/src/install/rover_controller:/opt/ros/humble /usr/bin/cmake --install /home/rj/tasks_ws/build/number_square

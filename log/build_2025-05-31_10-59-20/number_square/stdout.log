@@ -1,0 +1,28 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/pub_node.dir/src/number_publisher.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/sub_node.dir/src/number_square.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable pub_node[0m
+[ 75%] Built target pub_node
+[100%] [32m[1mLinking CXX executable sub_node[0m
+[100%] Built target sub_node
+-- Install configuration: ""
+-- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/pub_node
+-- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/pub_node" to ""
+-- Installing: /home/rj/tasks_ws/install/number_square/lib/number_square/sub_node
+-- Set runtime path of "/home/rj/tasks_ws/install/number_square/lib/number_square/sub_node" to ""
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square//launch/launch_nodes.py
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/package_run_dependencies/number_square
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/parent_prefix_path/number_square
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.sh
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/environment/path.dsv
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.bash
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.sh
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.zsh
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/local_setup.dsv
+-- Installing: /home/rj/tasks_ws/install/number_square/share/number_square/package.dsv
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/ament_index/resource_index/packages/number_square
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig.cmake
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/cmake/number_squareConfig-version.cmake
+-- Up-to-date: /home/rj/tasks_ws/install/number_square/share/number_square/package.xml
