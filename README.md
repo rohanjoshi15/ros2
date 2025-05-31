@@ -402,6 +402,7 @@ _Assume x and y are arbitrary valid duration values._
 | x         | y (where y > x)      | Yes        |
 | x         | y (where y < x)      | No         |
 
+---
 
 ### ROS2 Vs ROS1
 
