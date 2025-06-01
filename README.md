@@ -14,10 +14,14 @@ In ROS 2, a workspace is where you keep all your packages. You create a workspac
 ```bash
 mkdir -p ~/tasks_ws/src    # 'tasks_ws' is the workspace name which i have given , It can be custom
 cd ~/tasks_ws
-colcon build
+colcon build --symlink-install
 source install/setup.bash
 ```
-
+## What "symlink-install" does is that it tells colcon to symlink (create symbolic links) instead of copying files when installing built packages to the install/ directory.
+## Benefits of --symlink-install:
+- Faster builds: Files are not copied; just linked.
+- Easier debugging: If you modify source files, the changes are immediately visible in the install/ space because it's linked, not copied.
+- Efficient for development: You don’t have to rebuild every time you make minor changes to scripts or launch files.
 ---
 
 ## Package
