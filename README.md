@@ -1,5 +1,5 @@
 # ROS 2 (Robot Operating System 2)
-## For Building a rover 4WD go to master branch
+## For the 4 Wheel Differential drive rover go to master branch
 
 ROS 2 is an upgrade over ROS 1, utilizing DDS (Data Distribution System) for real-time, multi-platform, and decentralized communication.
 - I have provided the resources for further references below.
