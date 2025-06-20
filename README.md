@@ -1,7 +1,7 @@
 
 # ROS 2 Simulation task
 
-- This repository contains a complete ROS 2-based simulation setup for a 4-wheeled differential drive rover with LiDAR and camera sensors, emergency stop logic.
+- This repository contains a complete ROS 2-based simulation setup for a 4-wheeled differential drive rover with lidar and camera sensors, emergency stop logic.
 - The gazebo simulation requires xacro file and gazebo plugins
 ---
 
@@ -39,18 +39,57 @@ src/rover_controller
   xacro robot.xacro > robot.urdf
   ```
 
-### Gazebo Extensions (`robot.gazebo`)
+## Gazebo Extensions (`robot.gazebo`)
 
-- Adds material, friction (`mu1`, `mu2`), sensor visuals, and plugins to the model.
-- Plugin: `libgazebo_ros_diff_drive.so` is used to convert `cmd_vel` commands into joint movements.
-- Example:
-  ```xml
-  <plugin name="wheel_drive_controller" filename="libgazebo_ros_diff_drive.so">
-    <left_joint>back_left_wheel_joint</left_joint>
-    <right_joint>back_right_wheel_joint</right_joint>
-    ...
-  </plugin>
-  ```
+Adds Gazebo-specific configurations to the robot model:
+
+### 1. Visual & Physical Properties
+```xml
+<gazebo reference="body_link">
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <material>Gazebo/Red</material>
+</gazebo>
+```
+
+- Adds friction and color to the body and wheels.
+- Add fricition for more efficient stopping
+
+### 2. Differential Drive Plugin
+```xml
+<plugin name="wheel_drive_controller" filename="libgazebo_ros_diff_drive.so">
+  <left_joint>back_left_wheel_joint</left_joint>
+  <right_joint>back_right_wheel_joint</right_joint>
+  ...
+</plugin>
+```
+- Converts `cmd_vel` velocity commands into joint movements.
+- Used for both differential drive and skid steering (by pairing wheel joints).
+
+### 3. LiDAR Sensor Plugin
+```xml
+<plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+  <ros>
+    <argument>~/out:=scan</argument>
+  </ros>
+  <frame_name>laser_frame</frame_name>
+</plugin>
+```
+- Publishes `/scan` topic.
+- Shows LiDAR rays after enabling `<visualize>true</visualize>` inside the `<sensor>`.
+- You can see the lidar rays in the rviz.
+
+### 4. Camera Plugin
+```xml
+<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+  <cameraName>rrbot/camera1</cameraName>
+  <imageTopicName>image_raw</imageTopicName>
+  ...
+</plugin>
+```
+- Publishes image stream via `/image_raw`.
+
+---
 
 ### World File
 
@@ -71,7 +110,7 @@ src/rover_controller
 
 ### 3. **emergency_stop.cpp**
 - Subscribes to `/proximity_warning`.
-- Logs FATAL warning and can be extended to send a `cmd_vel` stop command.
+- Logs FATAL warning and extended to send a `cmd_vel` stop command.
 
 ```bash
 ros2 run rover_bot lidar_processor
@@ -95,9 +134,11 @@ source install/setup.bash
 
 - RViz2 config file: `rover_task_lidar_camera.rviz`
 - It automatically sets:
-  - Fixed frame: `odom`
-  - Displays for `/scan`, TF, camera
-  - 
+  - The rover
+  - TF Frames
+  - Camera feed
+  - LaserScan
+  - Odometry
 
 ---
 
@@ -130,5 +171,20 @@ ros2 topic echo /proximity_warning
 - Each transform has a translation , rotation and a timestamp
 
 - Nodes use tf2_ros::TransformBroadcaster to publish transforms
+
+---
+### Robot_State_Publisher
+- Publishes transforms based on URDF/XACRO joint angles.
+- It allows Rviz to know the rovers kinematic state
+- Works with `joint_state_publisher` to simulate joint motion.
 - To listen they use tf2_ros::Buffer and tf2_ros::TransformListener
+
+ # Working
+- Robots are described in URDF/Xacro as a tree of links connected by joints.
+- Each joint has a variable position (like angle for revolute joints, or displacement for prismatic ones). However, the URDF is static — it doesn’t update during motion.
+
+- That’s where the Robot State Publisher comes in:
+- It reads the joint values from the /joint_states topic
+- It uses forward kinematics to compute the pose of each link.
+- It publishes the full TF tree via /tf.
 ---
