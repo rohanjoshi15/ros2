@@ -7,8 +7,8 @@
 
 ## Project Structure and commands to use
 - Use commands :
-- ros2 launch rover_controller gazebo_rviz.launch.py to launch gazebo and rviz and spawn the entity
-- ros2 launch rover_controller launch_nodes.launch.py to launch the three nodes for the stopping logic
+- `ros2 launch rover_controller gazebo_rviz.launch.py` to launch gazebo and rviz and spawn the entity
+- `ros2 launch rover_controller launch_nodes.launch.py` to launch the three nodes for the stopping logic
 ```
 src/rover_controller
 ├── model/
@@ -112,11 +112,6 @@ Adds Gazebo-specific configurations to the robot model:
 - Subscribes to `/proximity_warning`.
 - Logs FATAL warning and extended to send a `cmd_vel` stop command.
 
-```bash
-ros2 run rover_bot lidar_processor
-ros2 run rover_bot proximity_warning
-ros2 run rover_bot emergency_stop
-```
 
 ---
 
