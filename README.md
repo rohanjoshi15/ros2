@@ -333,7 +333,8 @@ ros2 topic echo /proximity_warning
 ### rosbag2
 - Rosbag2 — the tool for recording and playback of communications in ROS 2 systems.
 - A "rosbag" is simply a file full of timestamped messages. The first goal of the tool is efficient recording, to support complex systems in real time. Its second goal is efficent playback, to allow for viewing and using recorded data.
-# How to use verbs
+  
+## How to use verbs
 - ros2 bag burst/ convert/ info/ list/ play/ record/ reindex
 
   
