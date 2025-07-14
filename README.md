@@ -350,9 +350,139 @@ ros2 topic echo /proximity_warning
 - A meta-message with this information is created and sent through the ROS 2 middleware to all the Subscriptions, which can then retrieve the original message from the IntraProcessManager.
 - The current implementation can’t be used when the QoS durability value is set to `Transient Local`.
 
-- 
+---
+### NEW ROVER LOGIC WITH OPENCV IMPLEMENTATION
+---
+---
 
+## 1. `cone_detector.cpp`
 
+### Purpose:
+Detect orange cones using the camera feed and publish their location.
+
+### Subscribed Topics:
+- `/camera/image_raw` (sensor_msgs::msg::Image)
+
+### Published Topics:
+- `/cone_position` (geometry_msgs::msg::Point)
+  - `x`: x-coordinate of the cone in the image
+  - `y`: y-coordinate of the cone
+  - `z`: 1 if detected, 0 otherwise
+
+### Core OpenCV Logic:
+```cpp
+cv::cvtColor(frame, hsv, cv::COLOR_BGR2HSV);
+cv::inRange(hsv, cv::Scalar(0, 70, 50), cv::Scalar(30, 255, 255), mask);
+```
+
+This converts BGR to HSV and thresholds for orange colors.
+
+```cpp
+cv::erode(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
+cv::dilate(mask, mask, cv::Mat(), cv::Point(-1, -1), 2);
+```
+
+Morphological operations to remove noise and enhance contour detection.
+
+Contours are drawn:
+```cpp
+cv::rectangle(frame, rect, cv::Scalar(0, 255, 0), 2);
+```
+
+And the image is displayed:
+```cpp
+cv::imshow("Masked Orange Areas", mask);
+cv::imshow("Camera with Bounding Box", frame);
+cv::waitKey(1);
+```
+
+---
+
+## 2. `lidar_processor.cpp`
+
+### Purpose:
+Process raw LaserScan data to find the nearest obstacle.
+
+### Subscribed Topics:
+- `/scan` (sensor_msgs::msg::LaserScan)
+
+### Published Topics:
+- `/min_distance` (std_msgs::msg::Float32)
+
+### Logic:
+```cpp
+for (auto range : msg->ranges)
+    if (std::isfinite(range) && range < min_val)
+        min_val = range;
+```
+
+Publishes the minimum valid distance from LiDAR readings.
+
+---
+
+## 3. `rover_controller.cpp` (Finite State Machine)
+
+### Purpose:
+Implements the rover's high-level logic based on:
+- Orange cone detection
+- Obstacle distance
+- Spin behavior
+- Random decisions
+
+### Subscribed Topics:
+- `/cone_position` (geometry_msgs::msg::Point)
+- `/min_distance` (std_msgs::msg::Float32)
+
+### Published:
+- `/cmd_vel` (geometry_msgs::msg::Twist)
+
+### FSM State Transitions:
+States include:
+- **GO_TO_CONE**: Move toward a cone (if distance > 4m)
+- **STOP_AND_SPIN**: At 4m, stop and spin for 5s to search for new cones
+- **GO_STRAIGHT**: After spin, go straight for 3s
+- **TURN_RANDOM**: After 3s straight, pick left/right turn
+- **AVOID_WALL**: If wall ahead < 4m
+- **IDLE**: Default stop
+
+### Example Transition:
+```cpp
+if (cone_detected_ && distance_ <= 4.0) {
+    current_state_ = State::STOP_AND_SPIN;
+}
+```
+
+### Random Turn:
+```cpp
+if ((this->now() - straight_start_time_).seconds() > 3.0) {
+    current_state_ = (rand() % 2 == 0) ? State::TURN_LEFT : State::TURN_RIGHT;
+}
+```
+
+---
+
+## 4. Design Notes
+
+- **Camera detects only orange cones**
+- **Lidar avoids all obstacles**
+- **FSM guarantees responsiveness**
+- **Vision always has override priority**
+- **States enforce safety and exploration**
+
+---
+
+## How It All Works Together
+
+1. **Cone Detected** → go toward it until 4m
+2. **At 4m** → stop & spin 90°
+   - Sees another cone? → go to new one
+   - No cone? → go straight 3s
+3. **After 3s** → turn randomly
+4. **Obstacle < 4m** → stop & spin
+
+At **any time**, cone detection interrupts and sends rover to **GO_TO_CONE**
+
+---
 
 
 
