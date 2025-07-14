@@ -1,0 +1,46 @@
+[0.009s] Invoking command in '/home/rj/rover_bot/build/rover_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rj/rover_bot/build/rover_controller -- -j24 -l24
+[0.055s] [35m[1mConsolidate compiler generated dependencies of target controller[0m
+[0.070s] [ 16%] [32mBuilding CXX object CMakeFiles/lidar_processor.dir/src/lidar_processor.cpp.o[0m
+[0.071s] [ 33%] [32mBuilding CXX object CMakeFiles/cone_detector.dir/src/cone_detector.cpp.o[0m
+[0.071s] [ 50%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[5.305s] [ 66%] [32m[1mLinking CXX executable lidar_processor[0m
+[5.563s] [ 66%] Built target lidar_processor
+[5.952s] [ 83%] [32m[1mLinking CXX executable cone_detector[0m
+[6.382s] [ 83%] Built target cone_detector
+[7.110s] [100%] [32m[1mLinking CXX executable controller[0m
+[7.452s] [100%] Built target controller
+[7.464s] Invoked command in '/home/rj/rover_bot/build/rover_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rj/rover_bot/build/rover_controller -- -j24 -l24
+[7.472s] Invoking command in '/home/rj/rover_bot/build/rover_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rj/rover_bot/build/rover_controller
+[7.478s] -- Install configuration: ""
+[7.478s] -- Installing: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/lidar_processor
+[7.481s] -- Set runtime path of "/home/rj/rover_bot/install/rover_controller/lib/rover_controller/lidar_processor" to ""
+[7.481s] -- Installing: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/controller
+[7.485s] -- Set runtime path of "/home/rj/rover_bot/install/rover_controller/lib/rover_controller/controller" to ""
+[7.486s] -- Installing: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/cone_detector
+[7.488s] -- Set runtime path of "/home/rj/rover_bot/install/rover_controller/lib/rover_controller/cone_detector" to ""
+[7.488s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch/gazebo_rviz.launch.py
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch/launch_nodes.launch.py
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/rover_world_with_cones.world
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/robot.gazebo
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/empty_world.world
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/robot.xacro
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/rviz
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/rviz/rover_task_lidar_camera.rviz
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/package_run_dependencies/rover_controller
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/parent_prefix_path/rover_controller
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/ament_prefix_path.sh
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/ament_prefix_path.dsv
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/path.sh
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/path.dsv
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.bash
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.sh
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.zsh
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.dsv
+[7.489s] -- Installing: /home/rj/rover_bot/install/rover_controller/share/rover_controller/package.dsv
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/packages/rover_controller
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/cmake/rover_controllerConfig.cmake
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/cmake/rover_controllerConfig-version.cmake
+[7.489s] -- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/package.xml
+[7.491s] Invoked command in '/home/rj/rover_bot/build/rover_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rj/rover_bot/build/rover_controller

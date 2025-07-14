@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a62896ceacdec4334038.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rover_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cone_detector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cone_detector-25c59ca3d98a4175e86e.json",
+					"name" : "cone_detector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-controller-408f435aff8c00500ed1.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lidar_processor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lidar_processor-05713f782e20608bd7fa.json",
+					"name" : "lidar_processor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rover_controller_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rover_controller_uninstall-f3573cb89e60e6a15239.json",
+					"name" : "rover_controller_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-40db2ddd03efff5cf047.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rj/rover_bot/build/rover_controller",
+		"source" : "/home/rj/rover_bot/src/rover_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

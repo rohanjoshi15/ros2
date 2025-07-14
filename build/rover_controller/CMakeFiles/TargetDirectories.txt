@@ -1,0 +1,12 @@
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/uninstall.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/rover_controller_uninstall.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/lidar_processor.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/controller.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/cone_detector.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/test.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/edit_cache.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/rebuild_cache.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/list_install_components.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/install.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/install/local.dir
+/home/rj/rover_bot/build/rover_controller/CMakeFiles/install/strip.dir

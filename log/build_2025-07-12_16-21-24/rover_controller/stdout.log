@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target cone_detector[0m
+[ 33%] Built target controller
+[ 66%] Built target lidar_processor
+[ 83%] [32mBuilding CXX object CMakeFiles/cone_detector.dir/src/cone_detector.cpp.o[0m

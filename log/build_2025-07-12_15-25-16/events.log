@@ -1,0 +1,118 @@
+[0.000000] (-) TimerEvent: {}
+[0.000574] (rover_controller) JobQueued: {'identifier': 'rover_controller', 'dependencies': OrderedDict()}
+[0.000674] (rover_controller) JobStarted: {'identifier': 'rover_controller'}
+[0.005889] (rover_controller) JobProgress: {'identifier': 'rover_controller', 'progress': 'cmake'}
+[0.006475] (rover_controller) JobProgress: {'identifier': 'rover_controller', 'progress': 'build'}
+[0.007149] (rover_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rj/rover_bot/build/rover_controller', '--', '-j24', '-l24'], 'cwd': '/home/rj/rover_bot/build/rover_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'rj'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rj'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/rj/.nvm/versions/node/v18.20.8/bin'), ('NVM_INC', '/home/rj/.nvm/versions/node/v18.20.8/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '8743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/rj/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rj/rover_bot/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rj'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rj/.nvm/versions/node/v18.20.8/bin:/opt/ros/humble/bin:/home/rj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rjazzy:@/tmp/.ICE-unix/2128,unix/rjazzy:/tmp/.ICE-unix/2128'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4e9f519_d403_4767_a8b3_4d3c64a59399'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ND292'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.135'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rj/rover_bot/install/rover_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rj/rover_bot/build/rover_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rj/rover_bot/install/rover_controller:/opt/ros/humble')]), 'shell': False}
+[0.052602] (rover_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target controller\x1b[0m\n'}
+[0.064529] (rover_controller) StdoutLine: {'line': b'[ 33%] Built target lidar_processor\n'}
+[0.066848] (rover_controller) StdoutLine: {'line': b'[ 66%] Built target cone_detector\n'}
+[0.070396] (rover_controller) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o\x1b[0m\n'}
+[0.099956] (-) TimerEvent: {}
+[0.200360] (-) TimerEvent: {}
+[0.300713] (-) TimerEvent: {}
+[0.401113] (-) TimerEvent: {}
+[0.501616] (-) TimerEvent: {}
+[0.603336] (-) TimerEvent: {}
+[0.703644] (-) TimerEvent: {}
+[0.803969] (-) TimerEvent: {}
+[0.904309] (-) TimerEvent: {}
+[1.004622] (-) TimerEvent: {}
+[1.104953] (-) TimerEvent: {}
+[1.205308] (-) TimerEvent: {}
+[1.305616] (-) TimerEvent: {}
+[1.405932] (-) TimerEvent: {}
+[1.506281] (-) TimerEvent: {}
+[1.606530] (-) TimerEvent: {}
+[1.706836] (-) TimerEvent: {}
+[1.807144] (-) TimerEvent: {}
+[1.907375] (-) TimerEvent: {}
+[2.007705] (-) TimerEvent: {}
+[2.108012] (-) TimerEvent: {}
+[2.208325] (-) TimerEvent: {}
+[2.308637] (-) TimerEvent: {}
+[2.408966] (-) TimerEvent: {}
+[2.509304] (-) TimerEvent: {}
+[2.609622] (-) TimerEvent: {}
+[2.709941] (-) TimerEvent: {}
+[2.810261] (-) TimerEvent: {}
+[2.910576] (-) TimerEvent: {}
+[3.010895] (-) TimerEvent: {}
+[3.111227] (-) TimerEvent: {}
+[3.211452] (-) TimerEvent: {}
+[3.311757] (-) TimerEvent: {}
+[3.412079] (-) TimerEvent: {}
+[3.512400] (-) TimerEvent: {}
+[3.612717] (-) TimerEvent: {}
+[3.713024] (-) TimerEvent: {}
+[3.813326] (-) TimerEvent: {}
+[3.913622] (-) TimerEvent: {}
+[4.013916] (-) TimerEvent: {}
+[4.114217] (-) TimerEvent: {}
+[4.214501] (-) TimerEvent: {}
+[4.314806] (-) TimerEvent: {}
+[4.415125] (-) TimerEvent: {}
+[4.515355] (-) TimerEvent: {}
+[4.615595] (-) TimerEvent: {}
+[4.715885] (-) TimerEvent: {}
+[4.816192] (-) TimerEvent: {}
+[4.916422] (-) TimerEvent: {}
+[5.016665] (-) TimerEvent: {}
+[5.116968] (-) TimerEvent: {}
+[5.217193] (-) TimerEvent: {}
+[5.317417] (-) TimerEvent: {}
+[5.417643] (-) TimerEvent: {}
+[5.517977] (-) TimerEvent: {}
+[5.618218] (-) TimerEvent: {}
+[5.718432] (-) TimerEvent: {}
+[5.818725] (-) TimerEvent: {}
+[5.919012] (-) TimerEvent: {}
+[6.019241] (-) TimerEvent: {}
+[6.119476] (-) TimerEvent: {}
+[6.219791] (-) TimerEvent: {}
+[6.320123] (-) TimerEvent: {}
+[6.420353] (-) TimerEvent: {}
+[6.520613] (-) TimerEvent: {}
+[6.620933] (-) TimerEvent: {}
+[6.721225] (-) TimerEvent: {}
+[6.799223] (rover_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller\x1b[0m\n'}
+[6.821382] (-) TimerEvent: {}
+[6.921677] (-) TimerEvent: {}
+[7.021987] (-) TimerEvent: {}
+[7.122338] (-) TimerEvent: {}
+[7.122691] (rover_controller) StdoutLine: {'line': b'[100%] Built target controller\n'}
+[7.134968] (rover_controller) CommandEnded: {'returncode': 0}
+[7.135764] (rover_controller) JobProgress: {'identifier': 'rover_controller', 'progress': 'install'}
+[7.146890] (rover_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rj/rover_bot/build/rover_controller'], 'cwd': '/home/rj/rover_bot/build/rover_controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'rj'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rj'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/rj/.nvm/versions/node/v18.20.8/bin'), ('NVM_INC', '/home/rj/.nvm/versions/node/v18.20.8/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '8743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/rj/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rj/rover_bot/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rj'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rj'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rj/.nvm/versions/node/v18.20.8/bin:/opt/ros/humble/bin:/home/rj/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rjazzy:@/tmp/.ICE-unix/2128,unix/rjazzy:/tmp/.ICE-unix/2128'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e4e9f519_d403_4767_a8b3_4d3c64a59399'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.7ND292'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.135'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rj/rover_bot/install/rover_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rj/rover_bot/build/rover_controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rj/rover_bot/install/rover_controller:/opt/ros/humble')]), 'shell': False}
+[7.156600] (rover_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.156969] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/lidar_processor\n'}
+[7.157471] (rover_controller) StdoutLine: {'line': b'-- Installing: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/controller\n'}
+[7.168260] (rover_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/rj/rover_bot/install/rover_controller/lib/rover_controller/controller" to ""\n'}
+[7.168543] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/lib/rover_controller/cone_detector\n'}
+[7.168802] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch\n'}
+[7.169016] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch/gazebo_rviz.launch.py\n'}
+[7.169147] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/launch/launch_nodes.launch.py\n'}
+[7.169214] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model\n'}
+[7.169355] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/robot.gazebo\n'}
+[7.169420] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/empty_world.world\n'}
+[7.169528] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/model/robot.xacro\n'}
+[7.169589] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/rviz\n'}
+[7.169651] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/rviz/rover_task_lidar_camera.rviz\n'}
+[7.169710] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/package_run_dependencies/rover_controller\n'}
+[7.169772] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/parent_prefix_path/rover_controller\n'}
+[7.169834] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/ament_prefix_path.sh\n'}
+[7.169894] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/ament_prefix_path.dsv\n'}
+[7.169951] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/path.sh\n'}
+[7.170005] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/environment/path.dsv\n'}
+[7.170067] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.bash\n'}
+[7.170125] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.sh\n'}
+[7.170179] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.zsh\n'}
+[7.170233] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/local_setup.dsv\n'}
+[7.170287] (rover_controller) StdoutLine: {'line': b'-- Installing: /home/rj/rover_bot/install/rover_controller/share/rover_controller/package.dsv\n'}
+[7.170342] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/ament_index/resource_index/packages/rover_controller\n'}
+[7.170397] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/cmake/rover_controllerConfig.cmake\n'}
+[7.170461] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/cmake/rover_controllerConfig-version.cmake\n'}
+[7.170628] (rover_controller) StdoutLine: {'line': b'-- Up-to-date: /home/rj/rover_bot/install/rover_controller/share/rover_controller/package.xml\n'}
+[7.171486] (rover_controller) CommandEnded: {'returncode': 0}
+[7.184106] (rover_controller) JobEnded: {'identifier': 'rover_controller', 'rc': 0}
+[7.184642] (-) EventReactorShutdown: {}
