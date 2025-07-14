@@ -1,5 +1,5 @@
 
-# ROS 2 Simulation task
+# ROS 2 Simulation and Logic with OpenCV & YOLO
 
 - This repository contains a complete ROS 2-based simulation setup for a 4-wheeled differential drive rover with lidar and camera sensors, emergency stop logic.
 - The gazebo simulation requires xacro file and gazebo plugins
